@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" width="560" height="160">
+  <rect width="560" height="160" fill="#0c0c0b"/>
+  <rect x="40" y="56" width="3" height="48" rx="1.5" fill="#e84a1e"/>
+  <text x="58" y="99" font-family="'Syne',sans-serif" font-weight="800" font-size="54" letter-spacing="-2">
+    <tspan fill="#f5f1e8">Intent</tspan><tspan fill="#e84a1e">ry</tspan>
+  </text>
+</svg>
