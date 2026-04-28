@@ -3,7 +3,6 @@ name: Build & Push Docker Image
 on:
   push:
     branches: [main]
-    tags:     ["v*.*.*"]
   pull_request:
     branches: [main]
 
@@ -44,8 +43,6 @@ jobs:
           images: ${{ env.IMAGE }}
           tags: |
             type=ref,event=branch
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
             type=sha,prefix=sha-,format=short
             type=raw,value=latest,enable={{is_default_branch}}
 
