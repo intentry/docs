@@ -1,0 +1,42 @@
+# Intentry Docs — Cloudflare Workers (via @opennextjs/cloudflare)
+#
+# Deploy:
+#   pnpm run build   (runs: opennextjs-cloudflare build)
+#   pnpm run deploy  (runs: opennextjs-cloudflare deploy)
+#
+# Preview locally:
+#   pnpm run preview
+#
+# Before first deploy, create the R2 cache bucket:
+#   wrangler r2 bucket create docs-opennext-cache
+
+name               = "intentry-docs"
+main               = ".open-next/worker.js"
+compatibility_date = "2026-04-30"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+
+# ── Custom domain ─────────────────────────────────────────────────────────────
+# Serves on docs.intentry.dev
+# Set up in Cloudflare Dashboard → Workers → intentry-docs → Triggers → Custom Domains
+
+# ── Static assets ─────────────────────────────────────────────────────────────
+[assets]
+directory = ".open-next/assets"
+binding   = "ASSETS"
+
+# ── Self-reference service binding (required for ISR/caching) ─────────────────
+[[services]]
+binding = "WORKER_SELF_REFERENCE"
+service = "intentry-docs"
+
+# ── R2 incremental cache ──────────────────────────────────────────────────────
+# Docs is mostly static — cache misses are rare, but R2 is still required by OpenNext.
+# Create once before first deploy:
+#   wrangler r2 bucket create docs-opennext-cache
+[[r2_buckets]]
+binding     = "NEXT_INC_CACHE_R2_BUCKET"
+bucket_name = "docs-opennext-cache"
+
+# ── Image optimization ────────────────────────────────────────────────────────
+[images]
+binding = "IMAGES"
