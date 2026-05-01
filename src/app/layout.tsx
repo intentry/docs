@@ -18,10 +18,10 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: {
     default: 'Intentry Docs',
-    template: '%s — Intentry',
+    template: '%s - Intentry',
   },
   description:
-    'Documentation and open protocol specification for Intentry — prompt version control.',
+    'Documentation and open protocol specification for Intentry - prompt version control.',
 };
 
 export default function Layout({ children }: LayoutProps<'/'>) {

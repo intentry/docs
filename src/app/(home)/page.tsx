@@ -64,7 +64,7 @@ export default function HomePage() {
           </h1>
 
           <p className="mt-5 max-w-lg text-base leading-relaxed text-[var(--color-fd-muted-foreground)]">
-            Everything you need to version, diff, run, and collaborate on prompts —
+            Everything you need to version, diff, run, and collaborate on prompts -
             from the <code className="font-mono text-sm px-1.5 py-0.5 rounded bg-[var(--color-fd-accent)] border border-[var(--color-fd-border)]">intr</code> CLI
             reference to the open{' '}
             <code className="font-mono text-sm px-1.5 py-0.5 rounded bg-[var(--color-fd-accent)] border border-[var(--color-fd-border)]">.prompt</code> spec.

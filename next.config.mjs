@@ -5,7 +5,7 @@ const withMDX = createMDX();
 /** @type {import('next').NextConfig} */
 const config = {
   reactStrictMode: true,
-  // output: "standalone" removed — OpenNext Cloudflare handles bundling
+  // output: "standalone" removed - OpenNext Cloudflare handles bundling
 };
 
 export default withMDX(config);

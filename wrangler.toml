@@ -1,4 +1,4 @@
-# Intentry Docs — Cloudflare Workers (via @opennextjs/cloudflare)
+# Intentry Docs - Cloudflare Workers (via @opennextjs/cloudflare)
 #
 # Deploy:
 #   pnpm run build   (runs: opennextjs-cloudflare build)
@@ -30,7 +30,7 @@ binding = "WORKER_SELF_REFERENCE"
 service = "intentry-docs"
 
 # ── R2 incremental cache ──────────────────────────────────────────────────────
-# Docs is mostly static — cache misses are rare, but R2 is still required by OpenNext.
+# Docs is mostly static - cache misses are rare, but R2 is still required by OpenNext.
 # Create once before first deploy:
 #   wrangler r2 bucket create docs-opennext-cache
 [[r2_buckets]]

@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 # ─────────────────────────────────────────────────────────────
-# Intentry Docs — Fumadocs / Next.js 16 (standalone output)
+# Intentry Docs - Fumadocs / Next.js 16 (standalone output)
 # ─────────────────────────────────────────────────────────────
 
 # ── Stage 1: Install dependencies ────────────────────────────
